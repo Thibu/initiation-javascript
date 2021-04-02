@@ -1,0 +1,16 @@
+*{
+    margin: 0 auto;
+    padding: 0 auto;
+}
+html{
+    background-color: green;
+}
+#corpsCalcul{
+    display: flex;
+    height: 100vh;
+    align-items: center;
+}
+p{
+    font-size: 5rem;
+    text-align: center;
+}
