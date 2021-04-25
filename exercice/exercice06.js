@@ -1,7 +1,7 @@
 // Tableau de citations
 let citations = [
     ["La vie est un mystère qu'il faut vivre, et non un problème à résoudre.", "Gandhi","https://www.buboquote.com/images/author_picture/Gandhi.png"],
-    ["Le plus grand risque est de ne prendre aucun risque.", "Mark Zuckerberg", "https://medias.liberation.fr/photo/1244075-le-pdg-de-facebook-au-musee-de-l-histoire-de-l-ordinateur.jpg"],
+    ["Le plus grand risque est de ne prendre aucun risque.", "Mark Zuckerberg", "https://images.hindustantimes.com/rf/image_size_630x354/HT/p2/2019/12/28/Pictures/_e4803794-297d-11ea-822c-9a9bb451da23.png"],
     ["Méritez votre statut de leader chaque jour.", "Mickael Jordan", "https://upload.wikimedia.org/wikipedia/commons/a/ae/Michael_Jordan_in_2014.jpg"],
     ["Soyez le changement que vous voulez voir dans le monde.", "Gandhi","https://www.buboquote.com/images/author_picture/Gandhi.png"],
     ["A chaque fois que vous vous retrouvez du même côté que la majorité, il est temps de prendre du recul, et de réfléchir.", "Mark Twain", "https://voyageurslecteurs.fr/wp-content/uploads/2018/04/Mark-Twain-1-e1523432526715.jpg"],
@@ -9,7 +9,7 @@ let citations = [
     ["Le succès c’est tomber sept fois, se relever huit.", "Proverbe japonais", "https://www.proverbemalin.fr/images/proverbe-japonais-tatouage_4.jpg"],
     ["Dans vingt ans vous serez plus déçus par les choses que vous n’avez pas faites que par celles que vous avez faites. Alors sortez des sentiers battus. Mettez les voiles. Explorez. Rêvez. Découvrez.", "Mark Twain", "https://voyageurslecteurs.fr/wp-content/uploads/2018/04/Mark-Twain-1-e1523432526715.jpg"],
     ["Si vous attendez pour agir, tout ce que vous gagnerez, avec le temps, c’est de l’âge.", "Brian Tracy", "https://live.staticflickr.com/2430/3594775876_bcef985b2b_b.jpg"],
-    ["Quand on concentre son attention sur un seul projet, l’esprit suggère constamment des idées et des améliorations qui lui échapperaient s’il était occupé avec plusieurs projets en même temps.", "P.T. Barnum", "https://en.wikipedia.org/wiki/P._T._Barnum#/media/File:PT_Barnum_1851-crop.jpg"],
+    ["Quand on concentre son attention sur un seul projet, l’esprit suggère constamment des idées et des améliorations qui lui échapperaient s’il était occupé avec plusieurs projets en même temps.", "P.T. Barnum", "https://upload.wikimedia.org/wikipedia/commons/8/8b/PT_Barnum_1851-crop.jpg"],
     ["Se dédier à faire tout ce que l’on peut pour aider les autres à obtenir ce qu’ils veulent, c’est la clé du succès.", "Brian Sher", "https://www.basicbananas.com/wp-content/uploads/2013/04/BS039.jpg"],
     ["Si vous pensez que vous êtes trop petit pour avoir de l’impact, essayez d’aller au lit avec un moustique.", "Anita Roddick", "https://upload.wikimedia.org/wikipedia/en/c/c4/Anita_Roddick.jpg"],
     ["Ne jugez pas chaque jour sur ce que vous récoltez, mais sur les graines que vous semez.", "Robert Louis Stevenson", "https://fr.web.img6.acsta.net/pictures/13/12/16/19/50/163165.jpg"],
@@ -26,19 +26,24 @@ let citations = [
   let dernier;
   let nbrRandom;
 
-  nbrRandom = Math.floor(Math.random() * 100) + 1; // returns a random integer from 1 to 100
+  
 
-  let contenucitation = document.querySelector('#citation');
+  let citationtxt = document.querySelector('#citation');
   let auteur = document.querySelector('#auteur');
   let img = document.querySelector('#portrait');
   let btn = document.querySelector('#nouveau');
 
   btn.addEventListener('click', () => {
+      
+      do {
+        nbrRandom = Math.floor(Math.random() * 21); // returns a random integer from 1 to 100
+      } while (nbrRandom != nbrRandom);
+      
+      citationtxt.textContent ='‘' + citations[nbrRandom][0] + '’';
 
-      contenucitation.in
+      auteur.textContent = citations[nbrRandom][1];
 
-
-
+      img.src = citations[nbrRandom][2];
 
   })
 
