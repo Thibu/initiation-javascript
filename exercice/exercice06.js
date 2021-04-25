@@ -33,20 +33,22 @@ let citations = [
   let img = document.querySelector('#portrait');
   let btn = document.querySelector('#nouveau');
 
+  citationtxt.textContent ="Plus tu dors, moins t'es fort.";
+  auteur.textContent = "Thibaut Ramiro";
+  img.src = 'https://scontent-bru2-1.xx.fbcdn.net/v/t1.6435-9/110313172_3152894724777580_5201543881102075668_n.jpg?_nc_cat=100&ccb=1-3&_nc_sid=09cbfe&_nc_ohc=LNv99XYdnP8AX-EZlbK&_nc_ht=scontent-bru2-1.xx&oh=c3e2f6956a9c8b77acf2ae387c35d905&oe=60ABCC43';
+
   btn.addEventListener('click', () => {
       
       do {
         nbrRandom = Math.floor(Math.random() * 21); // returns a random integer from 1 to 100
       } while (nbrRandom != nbrRandom);
       
-      citationtxt.textContent ='‘' + citations[nbrRandom][0] + '’';
+      citationtxt.textContent ='‘‘' + citations[nbrRandom][0] + '’’';
 
       auteur.textContent = citations[nbrRandom][1];
 
       img.src = citations[nbrRandom][2];
 
   })
-
-  console.log(nbrRandom);
 
 
