@@ -1,0 +1,24 @@
+*{
+    margin : 0;
+    padding: 0;
+}
+section{
+    margin: 0 auto;
+    width: 60rem;
+    margin-top: 30vh;
+    
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.contenu{
+    display: flex;
+    background-color: black;
+    margin-bottom: 10rem;
+}
+#nouveau{
+    padding: 1rem 0 1rem 0;
+    text-align: center;
+    width: 60rem;
+    background-color: chartreuse;
+}
