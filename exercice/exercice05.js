@@ -1,39 +1,33 @@
 
+let button = document.querySelector("button");
+let buttonVal = document.querySelector("button").value;
+let texte = document.createElement("p")
+    texte.textContent = "Yo salut ça va bien ou quoi";
 
- let body = document.querySelector('body')
- let txt = document.createElement('p')
- let blinkCara =':';
+button.addEventListener('click', () => {
 
- 
- function date() {
-
-    let fullDate = new Date();
-    let temps = fullDate.getHours() + ":"
-    + fullDate.getMinutes() + blinkCara
-    + fullDate.getSeconds();
-    txt.textContent = `${temps}`;
-
-    if ((fullDate.getSeconds()%2) == 1){
-        blinkCara = ":"
+    if (buttonVal == true){
+        buttonVal = false;
+        button.value = false;
+        checkEtat();
     }else{
-        blinkCara = "."
+        buttonVal = true;
+        button.value = true;
+        checkEtat();
     }
+})
 
 
-
-    document.body.append(txt);
-    txt.style.fontSize = '3rem';
-    txt.style.textAlign = 'center'
-    refresh();
+function checkEtat() {
+    if (buttonVal == true){
+        console.log(`true est l'état de button`)
+        button.textContent = "Cacher";
+        document.body.append(texte);
+    }else{
+        console.log(`false est l'état de button`)
+        button.textContent = "Afficher"
+        texte.remove();
+    }
 }
 
-function refresh() {
-    setTimeout(() => {
-      date()  
-    }, 1000);
-    
-}
-date();
-
-
-
+checkEtat();
